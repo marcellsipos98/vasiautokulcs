@@ -223,8 +223,11 @@ section[id] {
 
 .facebook-frame-shell {
   display: inline-flex;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
   max-width: 100%;
-  padding: 0.75rem;
+  padding: 0.5rem;
   border: 1px solid rgba(226, 232, 240, 0.78);
   border-radius: 1rem;
   background: #f8fafc;
@@ -235,10 +238,18 @@ section[id] {
 
 .facebook-frame {
   display: block;
-  width: min(500px, calc(100vw - 4.5rem));
+  width: 100%;
+  max-width: 500px;
   min-height: 517px;
   border-radius: 0.75rem;
   background: #ffffff;
+}
+
+@media (min-width: 640px) {
+  .facebook-frame-shell {
+    width: auto;
+    padding: 0.75rem;
+  }
 }
 
 .reference-image {

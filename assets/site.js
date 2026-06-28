@@ -358,9 +358,10 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
+      const frameWidth = Math.max(280, Math.min(500, Math.floor(mount.getBoundingClientRect().width - 32)));
       const iframe = document.createElement("iframe");
-      iframe.src = mount.dataset.facebookSrc || "";
-      iframe.width = "500";
+      iframe.src = facebookEmbedUrl(mount.dataset.facebookSrc || "", frameWidth);
+      iframe.width = String(frameWidth);
       iframe.height = "517";
       iframe.style.border = "none";
       iframe.style.overflow = "hidden";
@@ -381,6 +382,16 @@ document.addEventListener("DOMContentLoaded", () => {
       mount.appendChild(shell);
       mount.dataset.loaded = "true";
     });
+  }
+
+  function facebookEmbedUrl(src, width) {
+    try {
+      const url = new URL(src);
+      url.searchParams.set("width", String(width));
+      return url.toString();
+    } catch {
+      return src;
+    }
   }
 
   function unloadFacebookEmbeds() {
