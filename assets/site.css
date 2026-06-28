@@ -1,0 +1,322 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #0a0a0a;
+  padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-orbitron {
+  font-family: "Orbitron", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 6.5rem;
+}
+
+.hero-bg {
+  background-image: linear-gradient(rgba(8, 10, 14, 0.98), rgba(6, 8, 12, 0.98));
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  isolation: isolate;
+}
+
+#particle-canvas {
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-bg > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.text-glow {
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.65), 0 0 18px rgba(59, 130, 246, 0.32);
+}
+
+.panel-dark {
+  background: rgba(17, 24, 39, 0.58);
+  border: 1px solid rgba(31, 41, 55, 1);
+  backdrop-filter: blur(6px);
+}
+
+.btn-glow {
+  background-image: linear-gradient(to right, #2563eb, #60a5fa);
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.28);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.btn-glow:hover,
+.btn-glow:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 0 28px rgba(96, 165, 250, 0.4);
+}
+
+.btn-secondary {
+  border: 1px solid rgba(75, 85, 99, 1);
+  background: rgba(31, 41, 55, 0.55);
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  border-color: rgba(96, 165, 250, 1);
+  background: rgba(31, 41, 55, 0.82);
+}
+
+.card-glow-border {
+  border: 1px solid #1f2937;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card-glow-border:hover,
+.card-glow-border:focus-within {
+  transform: translateY(-4px);
+  border-color: #3b82f6;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.22);
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.55s ease-out,
+    transform 0.55s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.lang-btn {
+  background: none;
+  border: 0;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.lang-btn:hover,
+.lang-btn:focus-visible {
+  color: #dbeafe;
+}
+
+.lang-btn.active {
+  color: #60a5fa;
+  font-weight: 700;
+}
+
+.eyebrow {
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #93c5fd;
+}
+
+.info-list a,
+.content-prose a,
+.footer-link,
+.breadcrumb-link {
+  color: #bfdbfe;
+}
+
+.info-list a:hover,
+.content-prose a:hover,
+.footer-link:hover,
+.breadcrumb-link:hover {
+  color: #ffffff;
+}
+
+.content-prose p {
+  color: #d1d5db;
+  line-height: 1.8;
+}
+
+.content-prose strong {
+  color: #f9fafb;
+}
+
+.content-prose ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #d1d5db;
+}
+
+.content-prose li + li {
+  margin-top: 0.45rem;
+}
+
+.service-chip {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(59, 130, 246, 0.24);
+  background: rgba(30, 41, 59, 0.72);
+  color: #dbeafe;
+}
+
+.brand-list {
+  border-top: 1px solid rgba(59, 130, 246, 0.18);
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  min-height: 3.2rem;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.14);
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.74), rgba(15, 23, 42, 0.2));
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.brand-link:hover,
+.brand-link:focus-visible {
+  color: #bfdbfe;
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0.22), rgba(15, 23, 42, 0.28));
+  padding-left: 1.25rem;
+}
+
+.page-shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.1), transparent 30%),
+    radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.08), transparent 28%);
+}
+
+.page-shell > * {
+  position: relative;
+}
+
+.facebook-placeholder,
+.cookie-panel,
+.floating-cta,
+.stat-card {
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.facebook-frame-shell {
+  display: inline-flex;
+  max-width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(226, 232, 240, 0.78);
+  border-radius: 1rem;
+  background: #f8fafc;
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.26),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+}
+
+.facebook-frame {
+  display: block;
+  width: min(500px, calc(100vw - 4.5rem));
+  min-height: 517px;
+  border-radius: 0.75rem;
+  background: #ffffff;
+}
+
+.reference-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.12), transparent 36%),
+    #05070b;
+}
+
+.floating-cta {
+  backdrop-filter: blur(14px);
+  padding-bottom: calc(0.85rem + env(safe-area-inset-bottom, 0px));
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal-surface {
+  max-height: min(86vh, 48rem);
+}
+
+.focus-ring:focus-visible,
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+.icon-badge {
+  width: 4rem;
+  height: 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background: rgba(30, 41, 59, 0.86);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+.icon-badge img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  filter: invert(75%) sepia(65%) saturate(1437%) hue-rotate(184deg) brightness(101%) contrast(97%);
+}
+
+.footer-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1.4fr 1fr 1fr;
+    align-items: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-bg {
+    background-attachment: scroll;
+  }
+
+  .fade-in-section,
+  .card-glow-border,
+  .btn-glow,
+  .btn-secondary {
+    transition: none;
+    transform: none;
+  }
+}
