@@ -358,7 +358,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      const frameWidth = Math.max(280, Math.min(500, Math.floor(mount.getBoundingClientRect().width - 32)));
+      const frameWidth = Math.max(280, Math.min(500, Math.floor(mount.getBoundingClientRect().width)));
       const iframe = document.createElement("iframe");
       iframe.src = facebookEmbedUrl(mount.dataset.facebookSrc || "", frameWidth);
       iframe.width = String(frameWidth);
