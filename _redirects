@@ -31,12 +31,6 @@ https://www.vasiautokulcs.eu/* https://vasiautokulcs.hu/:splat 301
 /seat /seat-kulcs/ 301
 /seat/ /seat-kulcs/ 301
 /seat/index.html /seat-kulcs/ 301
-/bmw /bmw-kulcs/ 301
-/bmw/ /bmw-kulcs/ 301
-/bmw/index.html /bmw-kulcs/ 301
-/mercedes /mercedes-kulcs/ 301
-/mercedes/ /mercedes-kulcs/ 301
-/mercedes/index.html /mercedes-kulcs/ 301
 /toyota /toyota-kulcs/ 301
 /toyota/ /toyota-kulcs/ 301
 /toyota/index.html /toyota-kulcs/ 301
