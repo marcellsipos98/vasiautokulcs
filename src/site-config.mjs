@@ -15,14 +15,14 @@ export const siteConfig = {
     facebook:
       "https://www.facebook.com/people/VasiAut%C3%B3kulcs/61580918533397/",
     phonePrimary: {
-      name: "Sipos Marcell",
-      display: "+36 20 289 1844",
-      href: "tel:+36202891844",
-    },
-    phoneSecondary: {
       name: "Sipos Dávid",
       display: "+36 30 934 7850",
       href: "tel:+36309347850",
+    },
+    phoneSecondary: {
+      name: "Sipos Marcell",
+      display: "+36 20 289 1844",
+      href: "tel:+36202891844",
     },
     serviceArea: "Szombathely, Vas vármegye és egyeztetés szerint a környező térségek",
     hosting: {
